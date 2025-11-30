@@ -1,0 +1,33 @@
+1,2,3. Liệt kê các bảng quan hệ tương ứng với mỗi thực thể , Xác định các thuộc tính trong từng bảng và 
+Chỉ ra khóa chính, khóa ngoại, và cách biểu diễn các mối quan hệ 1-N và N-N.
+- Bảng Bệnh Nhân có thuộc tính : 
+  + Mã Bệnh Nhân (Khóa Chính) 
+  + Họ Tên
+  + Giới Tính
+  + Địa Chỉ
+  + Số Điện Thoại
+- Bảng Bác Sĩ có thuộc tính :
+  + Mã Bác Sĩ (Khóa Chính)
+  + Mã Khoa (Khóa ngoại tham chiếu đến cột Mã Khoa của bảng Khoa)
+  + Họ Tên
+  + Giới Tính
+  + Chuyên Môn
+  + Email
+  + Số Điện Thoại
+- Bảng Khoa có thuộc tính :
+  + Mã Khoa (Khóa Chính)
+  + Tên Khoa
+  + Mô Tả
+- Bảng Hồ Sơ Khám Bệnh có thuộc tính :
+  + Mã Hồ Sơ Khám Bệnh (Khóa Chính)
+  + Mã Bệnh Nhân (Khóa ngoại tham chiếu đến cột Mã Bệnh Nhân của bảng Bệnh Nhân)
+  + Mã Bác Sĩ (Khóa ngoại tham chiếu đến cột Mã Bác Sĩ của bảng Bác Sĩ)
+  + Ngày Tạo 
+  + Chẩn Đoán
+  + Kết Luận 
+- Cách Biểu Diễn Các Mối Quan Hệ :
+  + 1-N : 1 Khoa Có Nhiều Bác Sĩ và 1 bác sĩ thuộc 1 khoa nên sẽ là mối quan hệ 1-N giữa Khoa Và Bác Sĩ. 
+Cách biểu diễn mối quan hệ 1-N : sẽ Đặt Khóa Chính của bảng có phía "1" là Khoa làm Khóa Ngoại trong bảng có phía "N" là Bác Sĩ. 
+  + N-N :1 Bệnh Nhân được nhiều bác sĩ khám và 1 bác sĩ khám cho nhiều bệnh nhân nên sẽ là mối quan hệ N-N
+giữa bệnh nhân và bác sĩ. Cách biểu diễn mối quan hệ N-N : sẽ thông qua bảng trung gian là Hồ Sơ Khám Bệnh và đặt 2 khoá chính
+của bảng bệnh nhân và bác sĩ làm 2 khóa ngoại của bảng trung gian.
